@@ -84,6 +84,16 @@ Verbosity levels:
 * warnings
 * infos
 
+### Cross-origin checks
+
+To enable loading of PDFs at remote hosts, the following configuration option must be set in an initialiser:
+
+  ```ruby
+  PdfjsViewer.hosted_viewer_origins = ["http://yourhost.com", "https://yourhost.com"]
+  ```
+
+Replacing `yourhost.com` for your own domain. CORS headers must still be set correctly on the remote host.
+
 ## Development
 
 Tests can be executed with:
